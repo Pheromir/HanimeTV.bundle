@@ -1,5 +1,6 @@
 import re  # import time def Log(dbgline): Log("\n\n\n----------\n\n" + time.strftime("%H:%M:%S - ") + dbgline + "\n\n---------\n\n\n")
 import sys
+import os
 
 import htv_api as hanimetv
 from datetime import datetime
@@ -16,7 +17,7 @@ class HanimeTV(Agent.Movies):
 
     def search(self, results, media, lang, manual=False):
         Log("".ljust(157, '-'))
-        slug = media.name.replace(" ", "-").lower()
+        slug = os.path.splitext(media.items[0].parts[0].file.split("/")[-1].lower())[0]
         Log("Fetching infos for " + slug)
         try:
             vid = hanimetv.get(slug)
