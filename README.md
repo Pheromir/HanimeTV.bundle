@@ -3,14 +3,14 @@ A Plex Metadata Agent for Hanime.TV.
 Please don't expect too much of this plugin, it might be full of bugs and throw some errors.
 
 ## Filenames
-Currently the agent uses the name given by Plex to search for the metadata. As it tries to translate the given name to the slug used by hanimetv internally (lowercase and dashes), 
-you should be able to use the official Hanime.TV title, but I recommend to use the slug (visible in the url of the video)
+The agent uses the direct filename (hentai-name.mp4) instead of the name provided by plex.
+As the agent replaces spaces by dashes, you can use them, but I still recommend keeping it simple by using the hanime.tv id directly.
+You can find the id in the URL of the video on hanime.tv.
 
+URL Example: `https://hanime.tv/videos/hentai/shuumatsu-no-harem-6` -> `shuumatsu-no-harem-6`
+File Example: `Shuumatsu no Harem 6` -> `shuumatsu-no-harem-6`
 
-Example: `Uchi no Otouto Maji de Dekain Dakedo Mi ni Konai? 2` -> `uchi-no-otouto-maji-de-dekain-dakedo-mi-ni-konai-2`
-
-
-Please just use the slug, I'm bad at matching stuff. Really.
+There isn't any magic title matching, so just use the htv id.
 
 ## Installation
 1. Download the latest code from this repository: "Code" -> "Download ZIP"
